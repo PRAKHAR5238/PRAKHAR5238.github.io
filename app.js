@@ -232,7 +232,8 @@ song.forEach(element => {
   const { id, songName, poster } = element;
   let card = document.createElement('a');
   card.classList.add('card');
-  card.href='#'+ id;
+  // card.href='#'+ id;
+   card.id = id;
   
   card.innerHTML = `
     <img src="${poster}" alt="" />
@@ -266,9 +267,10 @@ input.addEventListener('input', (e) => {
 
 // Add click event listener to each card for playing the same music
 cards.forEach((card) => {
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (ev) => {
+      index = card.id;
       // Play the music when any card is clicked
-      music.play();
+      tilePlayer();
   });
 });
 
