@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+    <link rel="icon" href="https://icons8.com/icon/LUhEeK6dAWhR/music.ico" type="image/x-icon">
+
+
+    <title>BEATS</title>
+    <style>
+        header .songbar::before {
+ 
+  background: url(https://i0.wp.com/www.kavitachhibber.com/wp-content/uploads/2018/03/KailashKher.jpg?fit=539%2C375&ssl=1);
+  background-repeat: no-repeat;
+  background-image: cover;
+  border-radius: 20%;
+  background-position: center;
+
+}
+
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <div class="sidebar">
+        <h1>PLAYLIST</h1>
+        <div class="playlist">
+          <h4 class="active">
+            <span></span><i class="bi bi-music-note-beamed"> </i>Playlist
+          </h4>
+          <h4 class="active">
+            <span></span><i class="bi bi-music-note-beamed"></i> LAst Listen
+          </h4>
+          <h4 class="active">
+            <span></span><i class="bi bi-music-note-beamed"> </i>Recommended
+          </h4>
+        </div>
+        <div class="menusong">
+          <li class="songitem">
+            <span>1</span>
+            <img src="img/1.png" alt="" />
+            <h5>
+              The Monster
+              <br />
+              <div class="subtitle">Eminem ft. Rihanna</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="1"></i>
+          </li>
+          <li class="songitem">
+            <span>2</span>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYmRmZTQ2MDktMWJhMS00NWFlLThlMTQtM2ZlZGUxMWExNzhlXkEyXkFqcGdeQXVyMTA2NTUzMjE4._V1_.jpg"
+              alt=""
+            />
+            <h5>
+              Teri Dewani <br />
+              <div class="subtitle">kailash Kher</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="2"></i>
+          </li>
+          <li class="songitem">
+            <span>3</span>
+            <img
+              src="https://1.bp.blogspot.com/-K6wCjud3MJ8/Va9w20UvCtI/AAAAAAAAGSo/ZNtt4l-etfk/s320/bbbb.jpg"
+              alt=""
+            />
+            <h5>
+              Brown Rang <br />
+              <div class="subtitle">Honey Singh</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="3"></i>
+          </li>
+          <li class="songitem">
+            <span>4</span>
+            <img src="https://static.toiimg.com/photo/59841709.cms" alt="" />
+            <h5>
+              Blue eyes <br />
+              <div class="subtitle">Honey Singh</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="4"></i>
+          </li>
+          <li class="songitem">
+            <span>5</span>
+            <img
+              src="data:image/jpeg;base64,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"
+              alt=""
+            />
+            <h5>
+              Tu hai wahi <br />
+              <div class="subtitle">kishore kumar</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="5"></i>
+          </li>
+          <li class="songitem">
+            <span>6</span>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYmRmZTQ2MDktMWJhMS00NWFlLThlMTQtM2ZlZGUxMWExNzhlXkEyXkFqcGdeQXVyMTA2NTUzMjE4._V1_.jpg"
+              alt=""
+            />
+            <h5>
+              Teri Dewani <br />
+              <div class="subtitle">kailash Kher</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="6"></i>
+          </li>
+          <li class="songitem">
+            <span>7</span>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYmRmZTQ2MDktMWJhMS00NWFlLThlMTQtM2ZlZGUxMWExNzhlXkEyXkFqcGdeQXVyMTA2NTUzMjE4._V1_.jpg"
+              alt=""
+            />
+            <h5>
+              Teri Dewani <br />
+              <div class="subtitle">kailash Kher</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="7"></i>
+          </li>
+          <li class="songitem">
+            <span>8</span>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYmRmZTQ2MDktMWJhMS00NWFlLThlMTQtM2ZlZGUxMWExNzhlXkEyXkFqcGdeQXVyMTA2NTUzMjE4._V1_.jpg"
+              alt=""
+            />
+            <h5>
+              Teri Dewani <br />
+              <div class="subtitle">kailash Kher</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="8"></i>
+          </li>
+          <li class="songitem">
+            <span>9</span>
+            <img
+              src="https://m.media-amazon.com/images/M/MV5BYmRmZTQ2MDktMWJhMS00NWFlLThlMTQtM2ZlZGUxMWExNzhlXkEyXkFqcGdeQXVyMTA2NTUzMjE4._V1_.jpg"
+              alt=""
+            />
+            <h5>
+              Teri Dewani <br />
+              <div class="subtitle">kailash Kher</div>
+            </h5>
+            <i class="bi playlist_play bi-play" id="9"></i>
+          </li>
+          
+        </div>
+      </div>
+
+      <div class="songbar">
+        <nav>
+          <ul>
+            <li>Discover <span></span></li>
+            <li>My Library</li>
+            <li>Radio</li>
+          </ul>
+          <div class="search">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </nav>
+        <div class="content">
+          <h1>Kailash Kher</h1>
+          <p>
+            I'm friends with the monster that's under my bed<br />
+            Get along with the voices inside of my head You're tryin' to save
+            me, stop holding your breath
+          </p>
+          <div class="button">
+            <button>Play</button>
+            <button>Follow</button>
+          </div>
+        </div>
+        <div class="popular">
+          <div class="popularsong">
+            <h4>Popular Song</h4>
+            <div class="btn">
+              <i class="bi bi-caret-left-fill" id="popular_left"></i>
+              <i class="bi bi-caret-right-fill" id="popular_right"></i>
+            </div>
+          </div>
+          <div class="poplist">
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="10"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="11"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="12"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="13"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="14"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="15"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="16"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="17"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="18"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="19"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+            <li class="songitem">
+              <div class="img-play">
+                <img src="" alt="" />
+                <i class="bi playlist_play bi-play" id="20"></i>
+              </div>
+              <h5>
+                The Monster
+                <br />
+                <div class="subtitle">Eminem ft. Rihanna</div>
+              </h5>
+            </li>
+        </div>
+        </div>
+        <div class="artist">
+          <div class="popularsong">
+            <h4>Popular Arist </h4>
+            <div class="btn">
+              <i class="bi bi-caret-left-fill" id="artist_left"></i>
+              <i class="bi bi-caret-right-fill" id="artist_right"></i>
+            </div>
+          </div>
+          <div class="item">
+            <li>
+                <a href="arjit.html"> <img
+                   src="https://lastfm.freetls.fastly.net/i/u/770x0/25305783d53cfe2fdc4da95066cb1353.jpg#25305783d53cfe2fdc4da95066cb1353"
+                   alt=""/></a>
+               </li>
+               <li>
+                 <a href="shanker.html"> <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSteTsE18QumgwtFYFZlmh675R87P_Jhd2If3btEZ3uT2ZVd83CW8_UwjMisyzKnWm1OMA&usqp=CAU"
+                    alt=""/></a>
+                </li>
+                <li>
+                    <a href="honey.html"> <img
+                       src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6RFOZIbWmbiPOYoa8FgYNM3ywpWKEgM3Sk6ilqFJckMhPi_Bj"
+                       alt=""/></a>
+                   </li>
+                   <li>
+                    <a href="kailash.html"> <img
+                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                       alt=""/></a>
+                   </li>
+                   <li>
+                    <a href="kishore.html"> <img
+                       src="https://imgs.search.brave.com/WDTIOCsqkml52x70OxrL5xb8CjYUkfQNTYPwegopF6U/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDY3NTIw/NTEuanBn"
+                       alt=""/></a>
+                   </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                alt=""
+              />
+            </li>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="master">
+        <div class="wave" id="masterwave">
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+        </div>
+        <img
+          src="img/kailash/15.png"
+          alt=""
+          id="poster"
+        />
+        <h5 id="title">
+            Manali Trance
+            
+          <div class="subtitle">Kailash Kher</div>
+        </h5>
+        <div class="icon">
+          <i class="bi" id="shuffleBtn">[/]</i>
+          <i class="bi bi-skip-start-fill" id="back"></i>
+          <i class="bi bi-play-fill" id="masterplay"></i>
+          <i class="bi bi-skip-end-fill" id="Next"></i>
+         <a href="" download id="download"><i class="bi bi-cloud-arrow-down-fill" ></i></a> 
+        </div>
+        <span id="current">0:00</span>
+        <div class="bar">
+          <input type="range" id="seek" min="0" max="100" />
+          <div class="bar2" id="bar2"></div>
+          <div class="dot"></div>
+        </div>
+        <span id="currentend">0:30</span>
+        <div class="vol">
+          <i class="bi bi-volume-up-fill" id="vol_icon"></i>
+          <input type="range" min="0" max="100" id="vol" />
+          <div class="volbar" id="bar2"></div>
+          <div class="dot" id="voldot"></div>
+        </div>
+      </div>
+    </header>
+    <script src="kailash.js"></script>
+  </body>
+</html>
