@@ -271,6 +271,8 @@ cards.forEach((card) => {
       index = card.id;
       // Play the music when any card is clicked
       tilePlayer();
+      // masterPlayer();
+
   });
 });
 
@@ -356,9 +358,11 @@ const tilePlayer = (isPaused = true) => {
 Array.from(document.getElementsByClassName("playlist_play")).forEach((e) => {
   e.addEventListener("click", (el) => {
     index = el.target.id;
-    const isPaused = !el.target.className.includes('bi-pause');
+    const isPaused = !el.target.className.includes("bi-pause");
     tilePlayer(isPaused);
-    download.href=`audio/${index}.mp3`
+    el.target && el.target.classList.add('bi-pause');
+    el.target && el.target.classList.remove('bi-play');
+    download.href = `audio/haryanvi/${index}.mp3`;
   });
 });
 

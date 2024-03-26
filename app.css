@@ -487,6 +487,8 @@ header .songbar nav .search .searchresult::-webkit-scrollbar {
   
 }
 
+
+
 header .songbar nav .search .searchresult .card {
   width: 100%;
   min-height: 45px;
@@ -702,7 +704,7 @@ header .songbar .artist .popularsong .bi:hover {
 }
 header .songbar .artist .item {
   width: 100%;
-  height: auto;
+  height: 100px;
   margin-top: 30px;
   display: flex;
   /* border: 1px solid white; */
@@ -719,11 +721,13 @@ header .songbar .artist .item li {
   margin-right: 20px;
   cursor: pointer;
   list-style: none;
+ 
 }
 header .songbar .artist .item li img {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  background-image: cover;
 }
 
 

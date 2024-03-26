@@ -18,11 +18,14 @@
     <style>
         header .songbar::before {
  
-  background: url(https://i0.wp.com/www.kavitachhibber.com/wp-content/uploads/2018/03/KailashKher.jpg?fit=539%2C375&ssl=1);
+          content: "";
+  background: url(icon/kailash.png);
   background-repeat: no-repeat;
-  background-image: cover;
-  border-radius: 20%;
+  background-size: cover; /* Adjust the size according to your needs */
   background-position: center;
+  height: 40px;
+  width: 100%; /* Ensure the pseudo-element spans the entire width of its parent */
+  display: block;
 
 }
 
@@ -157,19 +160,36 @@
           <ul>
             <li>Discover <span></span></li>
             <li>My Library</li>
-            <li>Radio</li>
+           <li>
+              <a href="index.html">
+                <i class="bi bi-house-fill"></i>
+              </a>
+            </li>
           </ul>
           <div class="search">
             <i class="bi bi-search"></i>
             <input type="text" placeholder="Search..." />
-          </div>
+            <div class="searchresult">
+              <!-- <a href="" class="card">
+                <img src="img/2.png" alt="" />
+                <div class="content">
+                  <h4>Music Name</h4>
+                  <div class="subtitle">
+                    Artist name - Album name
+                  </div>
+
+                  
+                </div>
+              </a> -->
+             
+
+            </div>
+            </div>
         </nav>
         <div class="content">
           <h1>Kailash Kher</h1>
           <p>
-            I'm friends with the monster that's under my bed<br />
-            Get along with the voices inside of my head You're tryin' to save
-            me, stop holding your breath
+          
           </p>
           <div class="button">
             <button>Play</button>
@@ -318,106 +338,51 @@
           </div>
           <div class="item">
             <li>
-                <a href="arjit.html"> <img
-                   src="https://lastfm.freetls.fastly.net/i/u/770x0/25305783d53cfe2fdc4da95066cb1353.jpg#25305783d53cfe2fdc4da95066cb1353"
-                   alt=""/></a>
-               </li>
-               <li>
-                 <a href="shanker.html"> <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSteTsE18QumgwtFYFZlmh675R87P_Jhd2If3btEZ3uT2ZVd83CW8_UwjMisyzKnWm1OMA&usqp=CAU"
-                    alt=""/></a>
-                </li>
-                <li>
-                    <a href="honey.html"> <img
-                       src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6RFOZIbWmbiPOYoa8FgYNM3ywpWKEgM3Sk6ilqFJckMhPi_Bj"
-                       alt=""/></a>
-                   </li>
-                   <li>
-                    <a href="kailash.html"> <img
-                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                       alt=""/></a>
-                   </li>
-                   <li>
-                    <a href="kishore.html"> <img
-                       src="https://imgs.search.brave.com/WDTIOCsqkml52x70OxrL5xb8CjYUkfQNTYPwegopF6U/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDY3NTIw/NTEuanBn"
-                       alt=""/></a>
-                   </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="arjit.html">
+                <img
+                  src="https://lastfm.freetls.fastly.net/i/u/770x0/25305783d53cfe2fdc4da95066cb1353.jpg#25305783d53cfe2fdc4da95066cb1353"
+                  alt=""
+              /></a>
             </li>
             <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="shanker.html">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSteTsE18QumgwtFYFZlmh675R87P_Jhd2If3btEZ3uT2ZVd83CW8_UwjMisyzKnWm1OMA&usqp=CAU"
+                  alt=""
+              /></a>
             </li>
             <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="honey.html">
+                <img
+                  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6RFOZIbWmbiPOYoa8FgYNM3ywpWKEgM3Sk6ilqFJckMhPi_Bj"
+                  alt=""
+              /></a>
             </li>
             <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="kailash.html">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
+                  alt=""
+              /></a>
             </li>
             <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="kishore.html">
+                <img
+                  src="https://imgs.search.brave.com/WDTIOCsqkml52x70OxrL5xb8CjYUkfQNTYPwegopF6U/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDY3NTIw/NTEuanBn"
+                  alt=""
+              /></a>
             </li>
             <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
+              <a href="haryanvi.html">
+                <img
+                  src="https://m.media-amazon.com/images/I/71u1o0d0FXL._SS500_.jpg"
+                  alt=""
+              /></a>
             </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
-            <li>
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXN3IZG_GcZhHK0R7cCDH26nzOegzi96f84QgunYYrSaEWV4ikdngApOkOuo7ec-XQqWc&usqp=CAU"
-                alt=""
-              />
-            </li>
+         
           </div>
         </div>
       </div>
-
       
       <div class="master">
         <div class="wave" id="masterwave">

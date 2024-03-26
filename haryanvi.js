@@ -185,6 +185,52 @@ Array.from(document.getElementsByClassName("songitem")).forEach((e, i) => {
   e.getElementsByTagName("img")[0].src = song[i].poster;
   e.getElementsByTagName("h5")[0].innerHTML = song[i].songName;
 });
+let searchresult = document.getElementsByClassName('searchresult')[0];
+song.forEach(element => {
+  const { id, songName, poster } = element;
+  let card = document.createElement('a');
+  card.classList.add('card');
+  // card.href='#'+ id;
+   card.id = id;
+  
+  card.innerHTML = `
+    <img src="${poster}" alt="" />
+    <div class="content">
+      <h4>${songName}</h4>
+    </div>`;
+  searchresult.appendChild(card);
+});
+
+// Get the input element using querySelector instead of getElementsByTagName
+let input = document.querySelector('input');
+let cards = document.querySelectorAll('.card');
+
+// Add event listener for the input field to perform a search when the user types in it
+input.addEventListener('input', (e) => {
+    let filter = e.target.value.toLowerCase();
+
+    // Hide or show cards based on the search term
+    cards.forEach((card) => {
+        let textContent = card.innerText.toLowerCase();
+        card.style.display = textContent.includes(filter) ? 'flex' : 'none';
+    });
+
+    // Hide all cards when no search term is entered
+    if (filter === '') {
+        cards.forEach((card) => {
+            card.style.display = 'none';
+        });
+    }
+});
+
+// Add click event listener to each card for playing the same music
+cards.forEach((card) => {
+  card.addEventListener('click', (ev) => {
+      index = card.id;
+      // Play the music when any card is clicked
+      tilePlayer();
+  });
+});
 
 music.addEventListener("pause", () => {
   masterPlayer(false);
@@ -254,6 +300,8 @@ Array.from(document.getElementsByClassName("playlist_play")).forEach((e) => {
     index = el.target.id;
     const isPaused = !el.target.className.includes("bi-pause");
     tilePlayer(isPaused);
+    el.target && el.target.classList.add('bi-pause');
+    el.target && el.target.classList.remove('bi-play');
     download.href = `audio/haryanvi/${index}.mp3`;
   });
 });
